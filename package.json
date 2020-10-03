@@ -1,0 +1,17 @@
+{
+  "name": "sticky_notes",
+  "version": "1.0.0",
+  "description": "this is an desktop app build using electron",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node ./src/main.js"
+  },
+  "keywords": [
+    "stick notes"
+  ],
+  "author": "Deeraj",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^10.1.3"
+  }
+}
