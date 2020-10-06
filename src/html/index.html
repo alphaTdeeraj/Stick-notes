@@ -4,22 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/fonts.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/icons.css" />
     <link rel="stylesheet" href="../css/card.css" />
     <title>Main page</title>
-    <style>
-      body {
-        display: flex;
-        height: 100vh;
-        width: 100vw;
-        justify-content: center;
-        align-items: center;
-      }
-    </style>
   </head>
   <body>
-    <div class="card-container">
-      <div class="top-bar"></div>
-      <input type="text" class="text-area bold-text" />
+    <div class="main-container">
+      <div class="icon-container">
+        <img class="icon" src="../assets/add.svg" alt="create" />
+        <img class="icon" src="../assets/gear.svg" alt="Settings" />
+        <img class="icon" src="../assets/cancel.svg" alt="Close" />
+      </div>
+      <div class="card-preview-container">
+        <div class="top-bar"></div>
+        <div class="notes-text-area">
+          <h4 class="heading">Hello header</h4>
+          <p class="description">this is the description</p>
+        </div>
+      </div>
     </div>
   </body>
 </html>

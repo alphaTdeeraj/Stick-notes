@@ -3,8 +3,10 @@ require("electron-reload")(__dirname);
 function createWindow() {
   // Create the browser window.
   const win = new BrowserWindow({
-    width: 800,
+    width: 400,
     height: 600,
+    maxWidth: 400,
+    frame: false,
     webPreferences: {
       nodeIntegration: true,
     },
