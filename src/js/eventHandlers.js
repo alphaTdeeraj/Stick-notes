@@ -5,7 +5,7 @@ let settingsIcon = document.getElementById("settings-icon");
 let closeIcon = document.getElementById("close-icon");
 
 addIcon.addEventListener("click", () => {
-  ipcRenderer.send("async-create-window", "../html/newNote.html");
+ 
 });
 
 settingsIcon.addEventListener("click", () => {

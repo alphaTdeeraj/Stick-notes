@@ -7,15 +7,10 @@ app.whenReady().then(() => {
   mainWindowID = createWindow("../html/index.html");
 });
 
-// event listeners
+// MAIN   PROCESS EVENT HANDLERS
 
-ipcMain.on("async-create-window", (event, args) => {
-  createWindow(args, {
-    height: 400,
-  });
-});
-
-ipcMain.on("async-close-window", (event, args) => {
+//FOR CLOSING THE WINDOW
+ipcMain.on("async-close-window", (event) => {
   try {
     const windowID = event.sender.browserWindowOptions.id;
     BrowserWindow.fromId(windowID).close();
