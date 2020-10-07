@@ -9,20 +9,34 @@
     <link rel="stylesheet" href="../css/card.css" />
     <title>Main page</title>
   </head>
+
   <body>
-    <div class="main-container">
+    <div class="main-container dark-theme-color">
       <div class="icon-container">
-        <img class="icon" src="../assets/add.svg" alt="create" />
-        <img class="icon" src="../assets/gear.svg" alt="Settings" />
-        <img class="icon" src="../assets/cancel.svg" alt="Close" />
+        <img id="add-icon" class="icon" src="../assets/add.svg" alt="create" />
+        <img
+          id="settings-icon"
+          class="icon"
+          src="../assets/gear.svg"
+          alt="Settings"
+        />
+        <img
+          id="close-icon"
+          class="icon"
+          src="../assets/cancel.svg"
+          alt="Close"
+        />
       </div>
       <div class="card-preview-container">
-        <div class="top-bar"></div>
+        <div class="top-bar blue-color"></div>
         <div class="notes-text-area">
           <h4 class="heading">Hello header</h4>
           <p class="description">this is the description</p>
         </div>
       </div>
     </div>
+    <script>
+      require("../js/eventHandlers.js");
+    </script>
   </body>
 </html>

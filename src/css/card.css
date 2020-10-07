@@ -13,7 +13,6 @@
 .top-bar {
   height: 3%;
   width: 100%;
-  background-color: rgba(70, 201, 212, 0.8);
 }
 .notes-text-area {
   width: 95%;
@@ -41,6 +40,11 @@
 }
 .card-preview-container:hover {
   background-color: rgb(72, 78, 78);
+}
+
+.card-container {
+  width: 100vw;
+  height: 100vh;
 }
 .text-area {
   flex: 1;

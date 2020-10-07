@@ -4,7 +4,7 @@
   "description": "this is an desktop app build using electron",
   "main": "src/main.js",
   "scripts": {
-    "start": "electron ./src/main.js"
+    "start": "electron ./src/js/main.js"
   },
   "keywords": [
     "stick notes"
