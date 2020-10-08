@@ -3,6 +3,9 @@
   margin: 0px;
   box-sizing: border-box;
 }
+::-webkit-scrollbar {
+  display: none;
+}
 
 .main-container {
   width: 100vw;
@@ -31,4 +34,17 @@
 
 .dark-theme-color {
   background-color: rgb(37, 40, 41) !important;
+}
+.light-dark-theme-color {
+  background-color: rgb(72, 78, 78);
+}
+.bold-text {
+  font-weight: bold;
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+}
+.medium-text {
+  font-weight: normal;
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
 }

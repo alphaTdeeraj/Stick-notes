@@ -8,7 +8,7 @@ function createWindow(fileName, config) {
   const defaultSettings = {
     width: 400,
     height: 600,
-    center: false,
+    center: true,
     id: id,
     webPreferences: {
       nodeIntegration: true,
@@ -20,9 +20,11 @@ function createWindow(fileName, config) {
   id++;
   // and load the index.html of the app.
   win.loadFile(fileName);
-
+  //remove the menu bar
+  if (config.removeMenu) {
+    win.removeMenu();
+  }
   id++;
-  return win.id;
 }
 
 module.exports = {

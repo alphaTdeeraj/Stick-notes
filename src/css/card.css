@@ -1,3 +1,8 @@
+.list-container {
+  padding-top: 50px;
+  width: 100vw;
+}
+
 .card-preview-container {
   width: 95%;
   height: 100px;
@@ -28,16 +33,6 @@
   width: 100%;
 }
 
-.card-preview-container::after {
-  content: "";
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  bottom: -10px;
-  right: -10px;
-  border-top-left-radius: 4px;
-  background-color: rgb(37, 40, 41);
-}
 .card-preview-container:hover {
   background-color: rgb(72, 78, 78);
 }
@@ -55,11 +50,4 @@
   color: white;
   font-family: "Raleway", sans-serif;
   font-size: 25px;
-}
-
-.bold-text {
-  font-weight: bold;
-}
-.medium-text {
-  font-weight: normal;
 }

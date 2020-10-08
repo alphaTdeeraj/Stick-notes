@@ -1,17 +1,20 @@
 //modules import
 const { ipcRenderer, BrowserWindow } = require("electron");
-let addIcon = document.getElementById("add-icon");
-let settingsIcon = document.getElementById("settings-icon");
-let closeIcon = document.getElementById("close-icon");
+const addIcon = document.getElementById("add-icon");
+const settingsIcon = document.getElementById("settings-icon");
+const addButton = document.getElementById("add-item-button");
+const newItemContainer = document.getElementById("new-item-container");
 
 addIcon.addEventListener("click", () => {
- 
+  newItemContainer.classList.add("show");
 });
 
 settingsIcon.addEventListener("click", () => {
   console.log("settings icon was clicked");
 });
 
-closeIcon.addEventListener("click", () => {
-  ipcRenderer.send("async-close-window");
+//for new item added
+addButton.addEventListener("click", (event) => {
+  event.preventDefault();
+  newItemContainer.classList.remove("show");
 });
