@@ -1,6 +1,11 @@
-const { app, ipcMain, BrowserWindow } = require("electron");
+const { app, ipcMain } = require("electron");
+const fs = require("fs");
+const path = require("path");
 const env = process.env.NODE_ENV || "development";
 const { createWindow } = require("./utils");
+
+let tasksList = [];
+let mainWindow;
 
 // If development environment
 if (env === "development") {
@@ -15,19 +20,25 @@ if (env === "development") {
 }
 
 app.whenReady().then(() => {
-  createWindow("../html/index.html", {
+  mainWindow = createWindow("../html/index.html", {
     removeMenu: true,
+  });
+  mainWindow.on("close", () => {
+    if (tasksList) {
+      fs.writeFileSync(
+        path.join(__dirname, "tasks.json"),
+        JSON.stringify(tasksList)
+      );
+    }
   });
 });
 
 // MAIN   PROCESS EVENT HANDLERS
 
-//FOR CLOSING THE WINDOW
-ipcMain.on("async-close-window", (event) => {
-  try {
-    const windowID = event.sender.browserWindowOptions.id;
-    BrowserWindow.fromId(windowID).close();
-  } catch (err) {
-    console.log("could not close the window");
+ipcMain.on("async-update-tasks", (event, args) => {
+  if (args[0]) {
+    tasksList = args[1] || [];
+  } else {
+    tasksList.push(args[1]);
   }
 });

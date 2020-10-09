@@ -7,17 +7,30 @@
     <link rel="stylesheet" href="../css/global.css" />
     <link rel="stylesheet" href="../css/icons.css" />
     <link rel="stylesheet" href="../css/card.css" />
-    <link rel="stylesheet" href="../css/newItem.css">
+    <link rel="stylesheet" href="../css/newItem.css" />
     <title>Time Boxing</title>
-   
   </head>
   <body>
-   <div id="new-item-container" class="new-item-container dark-theme-color">
-     <form class="form-center" action="">
-       <input class="form-input medium-text light-dark-theme-color " autofocus placeholder="Task name" type="text" maxlength="50" minlength="4"/>
-        <button class="form-button bold-text blue-color" type="submit" id="add-item-button">Add</button>
-     </form>
-   </div>
+    <div id="new-item-container" class="new-item-container dark-theme-color">
+      <form id="new-item-form" class="form-center" action="">
+        <input
+          name="task-name"
+          class="form-input medium-text light-dark-theme-color"
+          autofocus
+          placeholder="Task name"
+          type="text"
+          maxlength="50"
+          minlength="4"
+        />
+        <button
+          class="form-button bold-text blue-color"
+          type="submit"
+          id="add-item-button"
+        >
+          Add
+        </button>
+      </form>
+    </div>
     <div class="main-container dark-theme-color">
       <div class="icon-container">
         <img id="add-icon" class="icon" src="../assets/add.svg" alt="create" />
@@ -28,80 +41,7 @@
           alt="Settings"
         />
       </div>
-      <div class="list-container">
-        <div class="card-preview-container">
-          <div class="top-bar blue-color"></div>
-          <div class="notes-text-area">
-            <h4 class="heading">Hello header</h4>
-            <p class="description">this is the description</p>
-          </div>
-        </div>
-        <div class="card-preview-container">
-          <div class="top-bar blue-color"></div>
-          <div class="notes-text-area">
-            <h4 class="heading">Hello header</h4>
-            <p class="description">this is the description</p>
-          </div>
-        </div>
-        <div class="card-preview-container">
-          <div class="top-bar blue-color"></div>
-          <div class="notes-text-area">
-            <h4 class="heading">Hello header</h4>
-            <p class="description">this is the description</p>
-          </div>
-        </div>
-        <div class="card-preview-container">
-          <div class="top-bar blue-color"></div>
-          <div class="notes-text-area">
-            <h4 class="heading">Hello header</h4>
-            <p class="description">this is the description</p>
-          </div>
-        </div>
-        <div class="card-preview-container">
-          <div class="top-bar blue-color"></div>
-          <div class="notes-text-area">
-            <h4 class="heading">Hello header</h4>
-            <p class="description">this is the description</p>
-          </div>
-        </div>
-        <div class="card-preview-container">
-          <div class="top-bar blue-color"></div>
-          <div class="notes-text-area">
-            <h4 class="heading">Hello header</h4>
-            <p class="description">this is the description</p>
-          </div>
-        </div>
-       
-        </div>
-        <div class="card-preview-container">
-          <div class="top-bar blue-color"></div>
-          <div class="notes-text-area">
-            <h4 class="heading">Hello header</h4>
-            <p class="description">this is the description</p>
-          </div>
-        </div>
-        <div class="card-preview-container">
-          <div class="top-bar blue-color"></div>
-          <div class="notes-text-area">
-            <h4 class="heading">Hello header</h4>
-            <p class="description">this is the description</p>
-          </div>
-        </div>
-        <div class="card-preview-container">
-          <div class="top-bar blue-color"></div>
-          <div class="notes-text-area">
-            <h4 class="heading">Hello header</h4>
-            <p class="description">this is the description</p>
-          </div>
-        </div>
-        <div class="card-preview-container">
-          <div class="top-bar blue-color"></div>
-          <div class="notes-text-area">
-            <h4 class="heading">Hello header</h4>
-            <p class="description">this is the description</p>
-          </div>
-        </div>
-      </div>
+      <div class="list-container"></div>
     </div>
     <script>
       require("../js/eventHandlers.js");

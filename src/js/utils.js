@@ -1,6 +1,5 @@
 const { BrowserWindow } = require("electron");
 
-let x = 200;
 let id = 1;
 
 //this function will create new  browser window
@@ -20,13 +19,27 @@ function createWindow(fileName, config) {
   id++;
   // and load the index.html of the app.
   win.loadFile(fileName);
+  win.openDevTools();
   //remove the menu bar
   if (config.removeMenu) {
     win.removeMenu();
   }
   id++;
+  return win;
 }
+
+//this function will return the new time with the offset
+function getFutureTime(actualTime = new Date().getTime(), offsetMinutes) {
+  try {
+    let futureTime = actualTime + 60000 * offsetMinutes;
+    return futureTime;
+  } catch (err) {
+    return undefined;
+  }
+}
+
 
 module.exports = {
   createWindow,
+  getFutureTime,
 };
