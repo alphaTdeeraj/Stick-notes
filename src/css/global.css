@@ -52,3 +52,7 @@
 .flex-1 {
   flex: 1;
 }
+
+.m-1 {
+  margin-top: 10px;
+}

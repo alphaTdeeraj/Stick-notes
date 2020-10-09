@@ -5,6 +5,7 @@ const fs = require("fs");
 const { uuid } = require("uuidv4");
 const { getFutureTime } = require("./utils");
 const { generateTaskList, createTaskHTML } = require("./components/tasks");
+const { isUndefined } = require("util");
 
 //TIME VARIABLE
 let referenceTime =
@@ -77,3 +78,15 @@ newItemForm.addEventListener("submit", (event) => {
   //remove the class show from the newItemContainer
   newItemContainer.classList.remove("show");
 });
+
+//pool for the expired tasks
+function isTaskExpired() {
+  if (tasks.length > 0) {
+    const currentTask = tasks[0];
+    if (currentTask.endTime < new Date().getTime()) {
+      document.getElementById(currentTask.id).style.display = "none";
+    }
+  }
+}
+
+setInterval(isTaskExpired, 1000);

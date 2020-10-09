@@ -19,7 +19,7 @@ function createWindow(fileName, config) {
   id++;
   // and load the index.html of the app.
   win.loadFile(fileName);
-  win.openDevTools();
+  // win.openDevTools();
   //remove the menu bar
   if (config.removeMenu) {
     win.removeMenu();
@@ -37,7 +37,6 @@ function getFutureTime(actualTime = new Date().getTime(), offsetMinutes) {
     return undefined;
   }
 }
-
 
 module.exports = {
   createWindow,
